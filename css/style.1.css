@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+    /* 
+    * Para que serve o `box-sizing`
+    O `box-sizing` define **se o `width` e o `height` vão considerar apenas o conteúdo ou também o padding e a borda**.
+----------------------------------------------------------------------
+    * `box-sizing: border-box;` (mais usado)
+    - `width` = **conteúdo + padding + border**
+    - O tamanho total do elemento não muda
+    - Layout mais previsível e fácil de controlar ✅
+*/
+    margin: 0;    
+    padding: 0;
+    outline: 0;
+    /* Tem alguns elementos do HTML que possuem uma margem, um padding e um outline padrão, como por exemplo o `h1` e o `p`.
+    Com o `margin: 0;`, o `padding: 0;` e o `outline: 0;` estamos removendo essas margens, esses paddings e esses outlines padrões, para que possamos controlar melhor o layout da nossa página. */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 180vh; /* (Isso foi para ativar o scroll da página) */
+}
+
+.container {
+    background-color: #121212;
+    width: 700px;
+    color: #ffffff;
+    margin: auto;
+    padding: 50px;
+    border: 5px solid red;
+    border-radius: 10px;
+    position: static; /* Por padrão temos essa posição quando ela não é informada */
+}
+
+ /* 
+    > 1. Por padrão, temos o Static que é a posição padrão, ou seja, quando não informamos nenhuma posição, o elemento tem a posição Static. Ele é posicionado de acordo com o fluxo normal do documento, ou seja, ele é posicionado onde ele aparece no código HTML. Ele não é afetado pelas propriedades top, bottom, left e right.
+    
+    > 2. O Relative é posicionado de acordo com o fluxo normal do documento, mas ele pode ser movido usando as propriedades top, bottom, left e right. Ele é posicionado em relação à sua posição original, ou seja, ele é movido a partir da posição onde ele aparece no código HTML.
+    
+    > 3. O Absolute é posicionado em relação ao seu elemento pai mais próximo que tenha a posição Relative, Absolute ou Fixed. Se não houver nenhum elemento pai com essas posições, ele é posicionado em relação ao elemento <html>. Ele é posicionado usando as propriedades top, bottom, left e right.
+    
+    > 4. O Fixed é posicionado em relação à janela do navegador. Ele é posicionado usando as propriedades top, bottom, left e right. Ele permanece fixo na mesma posição mesmo quando a página é rolada.
+   
+    >5. Sticky é uma combinação de Relative e Fixed. Ele é posicionado de acordo com o fluxo normal do documento, mas ele pode ser movido usando as propriedades top, bottom, left e right. Ele é posicionado em relação à sua posição original, mas ele se torna fixo quando atinge um determinado ponto na rolagem da página. 
+ */
+
+header {
+    background-color: cyan;
+    width: 100%;
+
+    position: sticky;
+    top: 0;
+}
+
+
+
+.area {
+    position: relative; /* Se removermos essa position: relative a informação vai sair da caixa, assim como esta no exemplo ".area1" */
+    width: 650px;
+    height: 500px;
+
+    border: 5px solid green
+}
+
+.area-absolute {
+    position: absolute; 
+    top:0;
+    right:0;
+    border: 5px solid blue;
+}
+
+
+.area1 {
+    width: 650px;
+    height: 500px;
+
+    border: 5px solid green
+}
+
+.area-absolute1 {
+    position: absolute; 
+    top:0;
+    right: 0;
+    border: 5px solid blue; 
+}
+
+
+.area2 {
+    width: 200px;
+    height: 80px;
+    background-color: green;
+    position: fixed;
+    bottom: 50px;
+    right: 80px;    
+}
+
+
+
+.rede-social h2{
+    text-align: center;
+}
+
+.rede-social ul {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+}
+
+.rede-social li {
+    margin-bottom: 12px;
+}
+
+.rede-social a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.rede-social a:hover {
+    color: #ff0000;
+}
