@@ -7,7 +7,11 @@
 
 body{
     font-family: 'Roboto', sans-serif;
-    height: 180vh;
+}
+
+html{
+    scroll-behavior: smooth;
+    /* O scroll-behavior: smooth; faz com que a navegação entre seções da página seja suave ao clicar nos links do menu. Se não funcionar no seu navegador chrome, basta ir no link "chrome://flags/" localizar o smooth marcar como "Enabled" e reiniciar, pronto!*/
 }
 
 
@@ -109,7 +113,7 @@ body{
 }
 
 .about img{
-    max-width: 450%;
+    max-width: 450px;
     border-radius: 8px;
 }
 
